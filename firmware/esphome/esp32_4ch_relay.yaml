@@ -1,0 +1,79 @@
+substitutions:
+  name: "esp32-4ch-relay"
+  friendly_name: "ESP32 4-Channel Relay"
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant native API
+api:
+
+# Enable Over-The-Air updates
+ota:
+  - platform: esphome
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot in case wifi connection fails
+  ap:
+    ssid: "ESP32-Relay-Fallback"
+    password: "fallbackpassword"
+
+captive_portal:
+
+# Web server for local browser access
+web_server:
+  port: 80
+
+# Switch components mapped to hardware GPIOs
+switch:
+  - platform: gpio
+    name: "Relay 1"
+    id: relay_1
+    pin:
+      number: GPIO21
+      mode: OUTPUT
+    icon: "mdi:power-socket-eu"
+    restore_mode: RESTORE_DEFAULT_OFF
+
+  - platform: gpio
+    name: "Relay 2"
+    id: relay_2
+    pin:
+      number: GPIO19
+      mode: OUTPUT
+    icon: "mdi:power-socket-eu"
+    restore_mode: RESTORE_DEFAULT_OFF
+
+  - platform: gpio
+    name: "Relay 3"
+    id: relay_3
+    pin:
+      number: GPIO18
+      mode: OUTPUT
+    icon: "mdi:power-socket-eu"
+    restore_mode: RESTORE_DEFAULT_OFF
+
+  - platform: gpio
+    name: "Relay 4"
+    id: relay_4
+    pin:
+      number: GPIO5
+      mode: OUTPUT
+    icon: "mdi:power-socket-eu"
+    restore_mode: RESTORE_DEFAULT_OFF
+
+button:
+  - platform: restart
+    name: "Restart Controller"

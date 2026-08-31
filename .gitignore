@@ -1,0 +1,39 @@
+# KiCad temporary and auto-save files
+*.kicad_prl
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_sch.bak
+*.bak
+*-save.kicad_pcb
+*-save.kicad_sch
+_autosave-*
+*.lck
+*.tmp
+
+# KiCad output directories
+fp-info-cache
+*.net
+*.erc
+*.drc
+
+# Gerber / Drill temporary exports (if placed in root)
+*.gbrjob
+*.pho
+
+# Operating System
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build / Firmware outputs
+.pio/
+build/
+*.bin
+*.elf
+*.hex

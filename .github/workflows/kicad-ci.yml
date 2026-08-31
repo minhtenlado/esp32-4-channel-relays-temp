@@ -1,0 +1,27 @@
+name: Hardware & Firmware CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Hardware File Integrity
+        run: |
+          test -f esp32-4-channel-relays.kicad_pro || (echo "Project file missing" && exit 1)
+          test -f esp32-4-channel-relays.kicad_sch || (echo "Schematic file missing" && exit 1)
+          test -f esp32-4-channel-relays.kicad_pcb || (echo "PCB file missing" && exit 1)
+          echo "All KiCad core files verified."
+
+      - name: Verify Documentation & BOM
+        run: |
+          test -f docs/BOM.md && test -f docs/BOM.csv
+          test -f docs/PINOUT.md
+          echo "Documentation verified."

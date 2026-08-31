@@ -1,0 +1,23 @@
+Item,Qty,Reference,Value,Footprint,Description
+1,1,U4,ESP32-WROOM-32,Module SMD,Wi-Fi & Bluetooth Dual-Core MCU Module
+2,4,"K1, K2, K3, K4",SRD-05VDC-SL-C,THT Relay,5VDC SPDT Relay (10A 250VAC / 10A 30VDC)
+3,4,"U5, U6, U7, U8",PC817,SMDIP-4,Optocoupler Phototransistor Galvanic Isolator
+4,4,"Q2, Q3, Q4, Q5",BC547A / NPN,SOT-23,NPN General Purpose Transistor (Relay Coil Driver)
+5,4,"D3, D5, D7, D9",1N4007,MELF / DO-213AB,1A 1000V General Purpose Flyback Diode
+6,4,"D2, D4, D6, D8",RED LED,0805 SMD,Relay Channel 1-4 Active Status Indicator
+7,1,D1,YELLOW LED,0805 SMD,3.3V Power Rail Indicator
+8,4,"J1, J2, J3, J4",Screw Terminal 3-Pin,5.08mm Pitch,"Screw Terminal (NO, COM, NC Contacts)"
+9,1,USB1,Type-C 16-Pin,HRO-TYPE-C-31-M-12,USB Type-C Receptacle 5V Power & Data
+10,1,U2,CH340C,SOIC-16,USB to Serial UART Interface with Built-in Oscillator
+11,1,Q1,MBT3904DW1,SOT-363 / SC-70-6,Dual NPN Transistor Auto-Reset & Download Circuit
+12,1,U1,AMS1117-3.3,SOT-223-3,3.3V 1A Low Dropout Linear Voltage Regulator
+13,1,U3,PRTR5V0U2X,SOT-143,Ultra-low Capacitance TVS Diode ESD Protection
+14,1,F1,500mA PTC,1206 SMD,Resettable Polyfuse Overcurrent Protection
+15,2,"SW1, SW2",Tactile Button,SKQG / 6x6mm SMD,Tactile Switches (RESET / BOOT)
+16,8,"R9, R10, R11, R12, R13, R14, R15, R16",1kΩ 1%,0805 SMD,Optocoupler LED Current Limiting & Base Drive Resistors
+17,3,"R6, R7, R8",10kΩ 1%,0805 SMD,Pull-Up Resistors (EN / IO0 / BOOT)
+18,2,"R2, R3",5.1kΩ 1%,0805 SMD,USB Type-C CC1 / CC2 Pull-Down Resistors
+19,2,"R4, R5",22Ω 1%,0805 SMD,USB D+ / D- Series Termination Resistors
+20,1,R1,2kΩ 1%,0805 SMD,Power LED Current Limiting Resistor
+21,3,"C1, C2, C7",22µF 16V,0805 SMD,Bulk Filtering Capacitors (5V / 3.3V rails)
+22,6,"C3, C4, C5, C6, C8, C9",0.1µF (100nF) 50V,0805 SMD,Decoupling Ceramic Capacitors
