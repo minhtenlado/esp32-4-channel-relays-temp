@@ -70,22 +70,22 @@ Thiết kế phù hợp để phát triển các ứng dụng tự động hóa 
 
 ## 🧩 Kiến trúc phần cứng
 
-### Sơ đồ khối hệ thống
+### System Block Diagram
 
 ```mermaid
 flowchart TB
-    USB["USB Type-C / nguồn vào 5 V"] --> PWR["Cầu chì F1 + diode SS14 + đường 5 V"]
-    PWR --> LDO["Ổn áp AMS1117-3.3"]
+    USB["USB Type-C / 5 V Input"] --> PWR["F1 Fuse + SS14 Diode + 5 V Power Rail"]
+    PWR --> LDO["AMS1117-3.3 Voltage Regulator"]
     LDO --> ESP["ESP32-C3-WROOM-02"]
-    PWR --> RELAYPOWER["Nguồn cuộn relay"]
+    PWR --> RELAYPOWER["Relay Coil Power Supply"]
     USB <-->|"USB D+ / D−"| ESP
-    ESP <-->|"I²C: SDA / SCL"| SHT["Cảm biến SHT31-DIS"]
-    ESP <-->|"UART + GPIO"| HDR["Đầu mở rộng 2 × 4"]
-    ESP --> DRV["4 mạch điều khiển PC817 + MMBT3904"]
-    DRV --> COILS["4 cuộn relay"]
+    ESP <-->|"I²C: SDA / SCL"| SHT["SHT31-DIS Temperature & Humidity Sensor"]
+    ESP <-->|"UART + GPIO"| HDR["2 × 4 Expansion Header"]
+    ESP --> DRV["4 × PC817 + MMBT3904 Relay Drivers"]
+    DRV --> COILS["4 Relay Coils"]
     RELAYPOWER --> COILS
-    COILS -. "Tác động cơ khí" .-> CONTACTS["4 terminal NO / COM / NC"]
-    MOV["MOV bảo vệ tại mạch tiếp điểm"] --- CONTACTS
+    COILS -. "Mechanical Actuation" .-> CONTACTS["4 × NO / COM / NC Output Terminals"]
+    MOV["MOV Surge Protection"] --- CONTACTS
 ```
 
 *Cuộn dây và tiếp điểm của relay tách biệt về điện bên trong relay, nhưng đóng/ngắt thông qua cơ cấu cơ khí. Việc có PC817 trong mạch không đồng nghĩa toàn bộ bo mạch đã có cách ly điện đạt chuẩn an toàn, đặc biệt khi hai phía cùng sử dụng GND.*
