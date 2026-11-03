@@ -268,12 +268,9 @@ Thư mục `library/` chứa các tệp ký hiệu, footprint, mô hình STEP v�
 Trên GitHub, chọn **Code → Download ZIP** để tải toàn bộ mã nguồn thiết kế. Hoặc sử dụng Git sau khi bạn đã tạo repository cho bo mạch này:
 
 ```bash
-git clone https://github.com/<ten-tai-khoan>/<ten-repository>.git
-cd <ten-repository>
+git clone https://github.com/minhtenlado/esp32-4-channel-relays-temp.git
+cd esp32-4-channel-relays-temp
 ```
-
-Thay `<ten-tai-khoan>` và `<ten-repository>` bằng tên thực tế của repository mới.
-
 ### Bước 2 — Mở project bằng KiCad
 
 1. Cài đặt phiên bản KiCad tương thích với file `.kicad_pro`, `.kicad_sch` và `.kicad_pcb`.
