@@ -37,10 +37,6 @@ Thiết kế phù hợp để phát triển các ứng dụng tự động hóa 
 - **Đầu mở rộng 2 × 4 chân:** đưa ra UART, GPIO0, GPIO1, nguồn 3,3 V, nguồn 5 V và GND.
 - **Các linh kiện bảo vệ:** cầu chì đầu vào, linh kiện bảo vệ ESD USB, diode dập xung ngược cho cuộn relay và vị trí lắp MOV ở phía tiếp điểm.
 - **PCB 2 lớp:** bố trí linh kiện SMD/THT, có hình ảnh mô phỏng 3D và vùng dành riêng cho anten Wi-Fi.
-
-> [!NOTE]
-> **Phạm vi dự án:** Repo này chứa sơ đồ nguyên lý, thiết kế PCB, thư viện linh kiện và dữ liệu xuất để sản xuất. Các tính năng như giao diện web, ứng dụng di động, kết nối đám mây hoặc cập nhật OTA là hướng mở rộng, **không được xem là đã triển khai** khi chưa có firmware tương ứng.
-
 ---
 
 ## 🖼️ Hình ảnh PCB
