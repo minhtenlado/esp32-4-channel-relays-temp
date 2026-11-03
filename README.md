@@ -63,9 +63,6 @@ Thiết kế phù hợp để phát triển các ứng dụng tự động hóa 
 | :---: | :---: |
 | ![Lớp F.Cu](Images/F_cu.png) | ![Lớp B.Cu](Images/B_cu.png) |
 
-> [!IMPORTANT]
-> Các ảnh được liên kết trực tiếp từ thư mục `Images/`. Nếu chỉnh sửa PCB, hãy xuất lại ảnh từ **phiên bản thiết kế cuối cùng** để hình minh họa trên GitHub khớp với file KiCad và Gerber.
-
 ---
 
 ## 🧩 Kiến trúc phần cứng
