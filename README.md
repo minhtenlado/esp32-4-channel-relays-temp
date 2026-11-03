@@ -183,10 +183,6 @@ Thiết kế có thêm bốn vị trí MOV `RV1`–`RV4` ở khu vực tiếp đ
 
 > [!CAUTION]
 > **An toàn điện:** PCB và file Gerber không phải chứng nhận an toàn điện. Nếu đóng cắt điện lưới 110/220/240 VAC, phải kiểm tra khoảng cách cách điện trong không khí (*clearance*), khoảng cách rò trên bề mặt (*creepage*), ranh giới đồng điện áp cao/thấp, cầu chì, đầu nối, vỏ bảo vệ, định mức relay và tiêu chuẩn áp dụng. **Không thử điện lưới trên bo chưa được kiểm định an toàn.** Nên thử nghiệm ban đầu với tải điện áp thấp có giới hạn dòng.
-
-> [!IMPORTANT]
-> **Công suất nguồn:** ESP32-C3 khi phát Wi-Fi và 4 cuộn relay có thể tạo ra dòng tiêu thụ đáng kể. Cần tính tổng dòng 5 V, khả năng cấp nguồn USB, sụt áp qua SS14, khả năng ổn áp/tản nhiệt của AMS1117 và thông số cầu chì trước khi kích cả 4 relay cùng lúc.
-
 ---
 
 ## 📁 Cấu trúc thư mục
