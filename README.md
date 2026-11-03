@@ -85,8 +85,6 @@ flowchart TB
     MOV["MOV Surge Protection"] --- CONTACTS
 ```
 
-*Cuộn dây và tiếp điểm của relay tách biệt về điện bên trong relay, nhưng đóng/ngắt thông qua cơ cấu cơ khí. Việc có PC817 trong mạch không đồng nghĩa toàn bộ bo mạch đã có cách ly điện đạt chuẩn an toàn, đặc biệt khi hai phía cùng sử dụng GND.*
-
 ### Thông số kỹ thuật
 
 | Thông số | Giá trị / thiết kế |
@@ -108,13 +106,9 @@ flowchart TB
 | Đầu nối mở rộng | Header 2 × 4, bước chân 2,54 mm (`J5`) |
 | Công cụ thiết kế | KiCad |
 
-> **Chú ý về định mức:** Điện áp và dòng tải cho phép không thể xác định chỉ từ tên footprint. Khi lắp ráp cần xác nhận **đúng mã relay**, điện áp cuộn dây, định mức tiếp điểm, đầu nối và linh kiện bảo vệ theo datasheet thực tế.
-
 ---
 
 ## 🔌 Bảng phân bổ chân
-
-Bảng dưới đây được tổng hợp từ **sơ đồ nguyên lý của bộ dự án đã gửi**. Nếu bạn đã thay đổi net hoặc chân trong phiên bản mới hơn, hãy đối chiếu lại với schematic hiện hành trước khi viết firmware.
 
 ### GPIO trên ESP32-C3
 
@@ -137,8 +131,6 @@ Bảng dưới đây được tổng hợp từ **sơ đồ nguyên lý của b�
 > **Lưu ý chân khởi động:** GPIO2, GPIO8 và GPIO9 là các chân *strapping* của ESP32-C3. Không được thiết kế mạch ngoại vi làm thay đổi trạng thái khởi động ngoài ý muốn.
 
 ### Đầu nối mở rộng J5
-
-Bảng thể hiện **số chân điện theo schematic KiCad**, không phải thứ tự quan sát tùy ý từ mặt trên hay mặt dưới đầu nối.
 
 | Chân | Tín hiệu | Chân | Tín hiệu |
 |:---:|---|:---:|---|
@@ -169,14 +161,7 @@ Bảng thể hiện **số chân điện theo schematic KiCad**, không phải t
 | 3 | `K3` | `J3` | NO · COM · NC |
 | 4 | `K4` | `J4` | NO · COM · NC |
 
-**Ý nghĩa các chân tiếp điểm:**
-
-- **COM (Common):** tiếp điểm chung.
-- **NO (Normally Open):** thường hở; thông thường nối với COM khi relay được kích.
-- **NC (Normally Closed):** thường đóng; thông thường nối với COM khi relay chưa được kích.
-
-Theo cách bố trí mạch kích trong sơ đồ đã cung cấp, GPIO mức **HIGH** được dự kiến để kích relay. Trạng thái thực tế phải được kiểm tra trên bo mạch đã lắp ráp với tải thử điện áp thấp.
-
+Theo cách bố trí mạch kích trong sơ đồ đã cung cấp, GPIO mức **HIGH** để kích relay.
 ---
 
 ## ⚡ Nguồn cấp và bảo vệ
